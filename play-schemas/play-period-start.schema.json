@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "eventId": {
+      "type": "integer"
+    },
+    "periodDescriptor": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "integer"
+        },
+        "periodType": {
+          "type": "string"
+        },
+        "maxRegulationPeriods": {
+          "type": "integer"
+        },
+        "otPeriods": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxRegulationPeriods",
+        "number",
+        "periodType"
+      ]
+    },
+    "timeInPeriod": {
+      "type": "string"
+    },
+    "timeRemaining": {
+      "type": "string"
+    },
+    "situationCode": {
+      "type": "string"
+    },
+    "homeTeamDefendingSide": {
+      "type": "string"
+    },
+    "typeCode": {
+      "type": "integer"
+    },
+    "typeDescKey": {
+      "type": "string"
+    },
+    "sortOrder": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "eventId",
+    "homeTeamDefendingSide",
+    "periodDescriptor",
+    "situationCode",
+    "sortOrder",
+    "timeInPeriod",
+    "timeRemaining",
+    "typeCode",
+    "typeDescKey"
+  ]
+}

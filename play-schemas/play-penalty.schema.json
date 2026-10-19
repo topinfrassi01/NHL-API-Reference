@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "properties": {
+    "eventId": {
+      "type": "integer"
+    },
+    "periodDescriptor": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "integer"
+        },
+        "periodType": {
+          "type": "string"
+        },
+        "maxRegulationPeriods": {
+          "type": "integer"
+        },
+        "otPeriods": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxRegulationPeriods",
+        "number",
+        "periodType"
+      ]
+    },
+    "timeInPeriod": {
+      "type": "string"
+    },
+    "timeRemaining": {
+      "type": "string"
+    },
+    "situationCode": {
+      "type": "string"
+    },
+    "homeTeamDefendingSide": {
+      "type": "string"
+    },
+    "typeCode": {
+      "type": "integer"
+    },
+    "typeDescKey": {
+      "type": "string"
+    },
+    "sortOrder": {
+      "type": "integer"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "xCoord": {
+          "type": "integer"
+        },
+        "yCoord": {
+          "type": "integer"
+        },
+        "zoneCode": {
+          "type": "string"
+        },
+        "typeCode": {
+          "type": "string"
+        },
+        "descKey": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "integer"
+        },
+        "committedByPlayerId": {
+          "type": "integer"
+        },
+        "drawnByPlayerId": {
+          "type": "integer"
+        },
+        "eventOwnerTeamId": {
+          "type": "integer"
+        },
+        "servedByPlayerId": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "descKey",
+        "duration",
+        "eventOwnerTeamId",
+        "typeCode",
+        "xCoord",
+        "yCoord",
+        "zoneCode"
+      ]
+    }
+  },
+  "required": [
+    "details",
+    "eventId",
+    "homeTeamDefendingSide",
+    "periodDescriptor",
+    "situationCode",
+    "sortOrder",
+    "timeInPeriod",
+    "timeRemaining",
+    "typeCode",
+    "typeDescKey"
+  ]
+}

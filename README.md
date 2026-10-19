@@ -709,6 +709,12 @@ curl -X GET "https://api-web.nhle.com/v1/where-to-watch"
   - `game-id` (int) - Game ID
 - **Response**: JSON format
 
+###### Schemas:
+
+Different play payloads have different `details`. Play details can have optional keys, making it difficult to parse without prior knowledge.
+
+JSON schemas are available for plays in [play-schemas](play-schemas). They were created using [genson](https://pypi.org/project/genson/) by aggregating all json payloads per `typeDescKey`.
+
 ###### Example using cURL:
 
 ```bash
